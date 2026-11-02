@@ -1,0 +1,28 @@
+@baseUrl = http://localhost:8000
+
+### Hämta alla uppgifter
+GET {{baseUrl}}/api/tasks
+Accept: application/json
+
+### Skapa uppgift
+POST {{baseUrl}}/api/tasks
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "Vattna blommorna"
+}
+
+### Radera uppgift
+DELETE {{baseUrl}}/api/tasks/5
+Accept: application/json
+
+### Uppdatera uppgift
+PUT {{baseUrl}}/api/tasks/3
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "Vattna blommorna",
+  "completed": 1
+}
